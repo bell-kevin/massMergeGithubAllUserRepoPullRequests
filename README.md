@@ -10,8 +10,6 @@ Step 2: Install the requests library Once Python is installed, you’ll need to 
 
 pip install requests
 
-![p](https://github.com/bell-kevin/massMergeGithubAllUserRepoPullRequests/blob/main/Capture.PNG)
-
 Step 3: Get your GitHub Personal Access Token You’ll need a GitHub Personal Access Token to authenticate your script with GitHub’s API. Here’s how you can get it:
 
 1. Go to GitHub and log in to your account.
