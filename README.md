@@ -1,4 +1,9 @@
-# 
+<a name="readme-top"></a>
+
+# Mass Merge Github Pull Requests
+
+Often, I don't want to spend lots of time merging pull requests, especially if I already know they are good and safe PRs, so here is a program that saves you, potentially, lots of time.
+
 Step 1: Install Python If you haven’t already, you’ll need to install Python on your computer. You can download it from the official website: https://www.python.org/downloads/
 
 Step 2: Install the requests library Once Python is installed, you’ll need to install the requests library, which allows you to send HTTP requests in Python. Open your command prompt or terminal and type the following command:
