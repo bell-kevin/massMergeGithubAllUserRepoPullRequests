@@ -1,12 +1,15 @@
 import requests
-from urllib.parse import urlparse, parse_qs
 
 # Personal access token
-headers = {'Authorization': 'token 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'}
+# Replace 'your-token' with your GitHub personal access token
+headers = {'Authorization': 'token your-token'}
 
 def get_all_pages(url):
     while url:
         response = requests.get(url, headers=headers)
+        if response.status_code != 200:
+            print(f"Failed to get data from {url}. HTTP status code: {response.status_code}. Message: {response.text}")
+            break
         yield response.json()
         if 'next' in response.links.keys():
             url = response.links['next']['url']
@@ -36,3 +39,5 @@ for repo in all_repos:
             # Check if the merge was successful
             if merge_response.status_code != 200:
                 print(f"Failed to merge pull request #{pr_number} in repository {repo_name}. Message: {merge_response.text}")
+            else:
+                print(f"Successfully merged pull request #{pr_number} in repository {repo_name}")
