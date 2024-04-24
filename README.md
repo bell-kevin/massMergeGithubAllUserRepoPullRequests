@@ -17,7 +17,7 @@ Step 3: Get your GitHub Personal Access Token You’ll need a GitHub Personal Ac
 6. Give your token a description, select the scopes (permissions) you want to grant this token (for this script, you’ll need repo scope), and click Generate token.
 7. Important: Be sure to copy your new personal access token now. You won’t be able to see it again!
 
-Step 4: Create the Python script Create a new Python file (.py) on your computer and copy the following code into it. Replace 'your-token' with the Personal Access Token you generated in the previous step 
+Step 4: Create the Python script Create a new Python file (.py) on your computer (using Visual Studio Code) and copy the following code into it. Replace 'your-token' with the Personal Access Token you generated in the previous step 
 
 Step 5: Run the script Save the Python file and run it from your command prompt or terminal by navigating to the directory where you saved the file and typing python filename.py, replacing filename with the name of your Python file.
 
