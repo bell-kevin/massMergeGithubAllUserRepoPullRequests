@@ -26,6 +26,8 @@ Step 4: Create the Python script Create a new Python file (.py) on your computer
 
 Step 5: Run the script Save the Python file and run it from your command prompt or terminal by navigating to the directory where you saved the file and typing python filename.py, replacing filename with the name of your Python file.
 
+![p](https://github.com/bell-kevin/massMergeGithubAllUserRepoPullRequests/blob/main/Capture1.PNG)
+
 Note: This script merges pull requests without any review or checks. Please use it responsibly. Also, ensure that your token has the necessary permissions to read and write pull requests.
 
 Remember, this is a simple script and may not cover all use cases. You might need to modify it according to your needs. For example, you might want to add error checking, handle pagination if you have more than 30 pull requests in a repository (as GitHub’s API pages results), or add conditions for which pull requests should be merged.
