@@ -2,7 +2,7 @@
 
 # Mass Merge Github Pull Requests
 
-Very often, if not always, I don't want to spend lots of time merging pull requests, especially if I already know they are good and safe pull requests, so here is a program that saves you, potentially, lots of time.
+Very often, if not always, I don't want to spend lots of time merging pull requests, especially if I already know they are good and safe pull requests, so here is a program that saves you, potentially, lots of time in terms of having to manually merge pull requests one by one.
 
 Step 1: Install Python If you haven’t already, you’ll need to install Python on your computer. You can download it from the official website: https://www.python.org/downloads/
 
