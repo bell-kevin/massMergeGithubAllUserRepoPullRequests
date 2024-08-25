@@ -1,4 +1,5 @@
 import requests
+import time
 
 # Personal access token
 # Replace 'your-token' with your GitHub personal access token
@@ -15,6 +16,9 @@ def get_all_pages(url):
             url = response.links['next']['url']
         else:
             break
+
+# Measure the start time
+start_time = time.time()
 
 # Get all repositories for the authenticated user
 all_repos = []
@@ -41,3 +45,11 @@ for repo in all_repos:
                 print(f"Failed to merge pull request #{pr_number} in repository {repo_name}. Message: {merge_response.text}")
             else:
                 print(f"Successfully merged pull request #{pr_number} in repository {repo_name}")
+
+# Measure the end time
+end_time = time.time()
+
+# Calculate the total execution time
+execution_time = end_time - start_time
+minutes, seconds = divmod(execution_time, 60)
+print(f"Total program execution time: {int(minutes)} minutes and {seconds:.2f} seconds")
