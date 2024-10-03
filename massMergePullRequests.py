@@ -25,6 +25,9 @@ all_repos = []
 for repos in get_all_pages('https://api.github.com/user/repos'):
     all_repos.extend(repos)
 
+# Initialize a counter for successful merges
+successful_merges = 0
+
 for repo in all_repos:
     repo_name = repo['name']
     # Get all pull requests
@@ -45,6 +48,7 @@ for repo in all_repos:
                 print(f"Failed to merge pull request #{pr_number} in repository {repo_name}. Message: {merge_response.text}")
             else:
                 print(f"Successfully merged pull request #{pr_number} in repository {repo_name}")
+                successful_merges += 1  # Increment the counter for successful merges
 
 # Measure the end time
 end_time = time.time()
@@ -53,3 +57,6 @@ end_time = time.time()
 execution_time = end_time - start_time
 minutes, seconds = divmod(execution_time, 60)
 print(f"Total program execution time: {int(minutes)} minutes and {seconds:.2f} seconds")
+
+# Print the total number of successful merges
+print(f"Total successful merges: {successful_merges}")
