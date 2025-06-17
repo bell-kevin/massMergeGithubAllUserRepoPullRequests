@@ -1,12 +1,23 @@
 import requests
 import time
+import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # ---- CONFIGURATION ----
-# IMPORTANT: Insert your GitHub Personal Access Token below
+# IMPORTANT: Insert your GitHub Personal Access Token below before running.
+# You may also use an environment variable (recommended for security).
 GITHUB_TOKEN = ''  # <-- Place your token here as a string, e.g. 'ghp_XXXXXXXXXXXXXXXXXXXX'
-GITHUB_USER = 'bell-kevin'
-MAX_WORKERS = 10  # Adjust as needed (10-20 is usually safe)
+GITHUB_USER = 'bell-kevin'  # <-- Replace with your GitHub username if needed
+
+# If token is not set, try to load from environment variable
+if not GITHUB_TOKEN:
+    GITHUB_TOKEN = os.getenv('GITHUB_TOKEN', '')
+
+# Dynamically set number of workers based on logical CPUs, with a safe cap
+CPU_COUNT = os.cpu_count() or 4
+MAX_WORKERS = min(32, CPU_COUNT * 2)
+print(f"Using {MAX_WORKERS} worker threads (detected {CPU_COUNT} logical CPUs).")
+
 BASE_URL = 'https://api.github.com'
 HEADERS = {'Authorization': f'token {GITHUB_TOKEN}'} if GITHUB_TOKEN else {}
 
@@ -77,7 +88,7 @@ def merge_pull_request(repo_name, pr_number):
 
 def main():
     if not GITHUB_TOKEN:
-        print("ERROR: Please set your GitHub token in the GITHUB_TOKEN variable at the top of this script.")
+        print("ERROR: Please set your GitHub token in the GITHUB_TOKEN variable or as the GITHUB_TOKEN environment variable.")
         return
 
     start_time = time.time()
