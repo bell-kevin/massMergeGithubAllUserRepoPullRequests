@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # IMPORTANT: Insert your GitHub Personal Access Token below before running.
 # You may also use an environment variable (recommended for security).
 GITHUB_TOKEN = ''  # <-- Place your token here as a string, e.g. 'ghp_XXXXXXXXXXXXXXXXXXXX'
-GITHUB_USER = 'bell-kevin'  # <-- Replace with your GitHub username if needed
+GITHUB_USER = 'bell-kevin'  # <-- Replace with your GitHub username if needed or you can leave it as GITHUB_USER = None
 
 # If token is not set, try to load from environment variable
 if not GITHUB_TOKEN:
