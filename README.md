@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-# Mass Merge Github Pull Requests
+# Mass Merge GitHub Pull Requests
 
 Very often, if not always, I don't want to spend lots of time merging pull requests, especially if I already know they are good and safe pull requests, so here is a program that saves you, potentially, lots of time in terms of having to manually merge pull requests one by one.
 
@@ -41,7 +41,7 @@ If you’re dealing with a large number of repositories and pull requests regula
 == We're Using GitHub Under Protest ==
 
 This project is currently hosted on GitHub.  This is not ideal; GitHub is a
-proprietary, trade-secret system that is not Free and Open Souce Software
+proprietary, trade-secret system that is not Free and Open Source Software
 (FOSS).  We are deeply concerned about using a proprietary system like GitHub
 to develop our FOSS project. I have a [website](https://bellKevin.me) where the
 project contributors are actively discussing how we can move away from GitHub
